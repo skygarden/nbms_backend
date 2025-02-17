@@ -1,0 +1,28 @@
+spring:
+    application:
+        name: nbms_backend
+    datasource:
+        url: jdbc:mysql://localhost:3306/studydb?autoReconnection=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+        username: devloper #${DB_USERNAME}
+        password: dev12!@ #${DB_PASSWORD}
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        # HikariCP (Spring Boot 기본 커넥션 풀) 설정
+        hikari:
+            maximum-pool-size: 10
+            minimum-idle: 5
+    servlet:
+        multipart:
+            max-file-size: 100MB
+            max-request-size: 110MB
+
+mybatis:
+    # Location for MyBatis mapper XML files
+    mapper-locations: classpath:mappers/**/*.xml
+    # Location for MyBatis model classes (alias package)
+    type-aliases-package: com.nexblue.nbms_backend.web.domain
+    configuration:
+        # Automatically map underscores in database column names to camelCase in Java beans
+        map-underscore-to-camel-case: true
+        call-setters-on-nulls: true
+        jdbc-type-for-null: varchar
+        default-fetch-size: 500
