@@ -65,7 +65,7 @@ task copyReactBuildFiles(type: Copy) {
 	into "$projectDir/src/main/resources/static"
 }
 
-# Axios 설치
+# Axios 설치 (http 비동기 통신 Library)
 npm install axios --save
 
 # Gradle Build (Springboot 프로젝트 폴더에서 진행)
