@@ -13,7 +13,7 @@ export default defineConfig({
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
       '@pages': fileURLToPath(new URL('./src/pages', import.meta.url)),
       '@recoil': fileURLToPath(new URL('./src/recoil', import.meta.url)),
-      '@style': fileURLToPath(new URL('./src/styles', import.meta.url)),
+      '@styles': fileURLToPath(new URL('./src/styles', import.meta.url)),
       '@types': fileURLToPath(new URL('./src/types', import.meta.url)),
       
     },
